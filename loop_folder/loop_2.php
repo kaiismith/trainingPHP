@@ -21,6 +21,7 @@
         
         if ($isPrime) {
             echo $i;
+            echo "<br>";
         }
     }
 
