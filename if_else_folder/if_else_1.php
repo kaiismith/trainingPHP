@@ -19,7 +19,9 @@
             if ($a ** 2 + $b ** 2 == $c ** 2 || $b ** 2 + $c ** 2 == $a ** 2 || $c ** 2 + $a ** 2 == $b ** 2) {
                 echo "Isosceles Right Triangle";
             }
-            echo "Isosceles Triangle";
+            else {
+                echo "Isosceles Triangle";
+            }
         }
         elseif ($a ** 2 + $b ** 2 == $c ** 2 || $b ** 2 + $c ** 2 == $a ** 2 || $c ** 2 + $a ** 2 == $b ** 2) {
             echo "Right Triangle";

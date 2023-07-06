@@ -20,7 +20,7 @@
     
     */
 
-    $n = 24;
+    $n = 505;
 
     $dict = ['', 'mot', 'hai', 'ba', 'bon', 'nam', 'sau', 'bay', 'tam', 'chin'];
     $donVi = ['', 'tram', 'linh', 'muoi'];
@@ -28,18 +28,31 @@
     $result = "";
     $temp = (string)($n);
 
-    if ((int)($temp[-1]) == 5 && strlen($temp) > 1 && (int)($temp[-2]) != 0) {
-        $dict[(int)($temp[-1])] = "lam";
-    }
+    // if ((int)($temp[-1]) == 5 && strlen($temp) > 1 && (int)($temp[-2]) != 0) {
+    //     $dict[(int)($temp[-1])] = "lam";
+    // }
     if (strlen($temp) == 3) {
         if ((int)($temp[1]) == 0 && (int)($temp[2]) == 0) {
             $result .= $dict[(int)($temp[0])] . " ". $donVi[1];
         }
         elseif ((int)($temp[1]) == 0 && (int)($temp[2]) != 0) {
-            $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[2] . " " . $dict[(int)($temp[2])];
+            if ((int)($temp[2]) == 5) {
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[2] . " " . "lam";
+            }
+            else {
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[2] . " " . $dict[(int)($temp[2])];
+            }
+        }
+        elseif ((int)($temp[2]) == 5) {
+            if ((int)($temp)[1] == 1) {
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[3] . " " . "lam";
+            }
+            else {
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $dict[(int)($temp[1])] . " " . $donVi[3] . " " . "lam";
+            }
         }
         else {
-            if ((int)($temp)[1] == 1) {
+            if ((int)($temp)[1]) {
                 $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[3] . " " . $dict[(int)($temp[2])];
             }
             else {
@@ -50,10 +63,21 @@
     }
     elseif (strlen($temp) == 2) {
         if ($n >= 10 && $n <= 19) {
-            $result .= "muoi" . " " . $dict[(int)($temp[1])];
+            if ($n == 15) {
+                $result .= "muoi" . " " . "lam";
+            }
+            else {
+                $result .= "muoi" . " " . $dict[(int)($temp[1])];
+            }
         }
         else {
-            $result .= $dict[(int)($temp[0])] . " ". $donVi[3] . " " . $dict[(int)($temp[1])];
+            if ((int)($temp[1]) != 5) {
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[3] . " " . $dict[(int)($temp[1])];
+            }
+            elseif ((int)($temp[1]) == 5) {
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[3] . " " . "lam";
+            }
+            
         }
     }
     elseif (strlen($temp) == 1) {
@@ -64,13 +88,6 @@
             $result .= $dict[(int)($temp[0])];
         }
     }
-
-    // for ($i = 0; $i < strlen($n); $i++) { 
-    //     if (condition) {
-    //         # code...
-    //     }
-    //     $result .= $dict[(int)($temp[$i])] . " " . $donVi[$i] . " ";
-    // }
 
     echo $result;
 ?>
