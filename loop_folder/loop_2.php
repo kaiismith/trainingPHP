@@ -1,12 +1,15 @@
 <?php
 
-    $n = 10;
+    $n = 5;
     $count = 1;
+    $num_count = 0;
+    $i = 2;
+    $j = 2;
 
-    for ($i = 2; $i <= $n; $i++) { 
-        for ($j = 2; $j <= $n; $j++) { 
+    while (true) {
+        while ($j <= $i) {
             if ($i % $j == 0) {
-                $count++;
+                $count += 1;
             }
             if ($count > 2) {
                 $isPrime = 0;
@@ -15,15 +18,18 @@
             else {
                 $isPrime = 1;
             }
+        $j++;
         }
         $count = 1;
-        # echo $isPrime;
-        
         if ($isPrime) {
+            if ($num_count == $n) {
+                break;
+            }
+            $num_count++;
             echo $i;
             echo "<br>";
         }
+        $i++;
+        $j = 2;
     }
-
-
 ?>
