@@ -25,6 +25,8 @@
     echo "<br><br> > Array";
     $d = array(1, 2, 3);
     echo "<br>";
+    print_r($d);
+    echo "<br>";
     var_dump($d);
 
     // Object
