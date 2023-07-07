@@ -20,7 +20,7 @@
     
     */
 
-    $n = 505;
+    $n = 25;
 
     $dict = ['', 'mot', 'hai', 'ba', 'bon', 'nam', 'sau', 'bay', 'tam', 'chin'];
     $donVi = ['', 'tram', 'linh', 'muoi'];
@@ -37,7 +37,7 @@
         }
         elseif ((int)($temp[1]) == 0 && (int)($temp[2]) != 0) {
             if ((int)($temp[2]) == 5) {
-                $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[2] . " " . "lam";
+                $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[2] . " " . "nam";
             }
             else {
                 $result .= $dict[(int)($temp[0])] . " ". $donVi[1] . " " . $donVi[2] . " " . $dict[(int)($temp[2])];
