@@ -58,13 +58,18 @@
         $b = $_POST['b'];
         $c = $_POST['c'];
 
-        $equ = new QuadracticEquation($a, $b, $c);
-        if ($equ->calculateDelta() >= 0) {
-            echo "x1: " . $equ->getRoot1() . "<br>";
-            echo "x2: " . $equ->getRoot2() . "<br>";
+        if ($a != 0) {
+            $equ = new QuadracticEquation($a, $b, $c);
+            if ($equ->calculateDelta() >= 0) {
+                echo "x1: " . $equ->getRoot1() . "<br>";
+                echo "x2: " . $equ->getRoot2() . "<br>";
+            }
+            else {
+                echo "NO SOLUTION!";
+            }
         }
         else {
-            echo "NO SOLUTION!";
+            echo "a must be non-zero number!";
         }
     }
 
