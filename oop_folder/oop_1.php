@@ -21,24 +21,24 @@
         public $width;
 
         function __construct($length, $width) {
-            $this -> length = $length;
-            $this -> width = $width;
+            $this->length = $length;
+            $this->width = $width;
         }
 
         function get_length(){
-            return $this -> length;
+            return $this->length;
         }
 
         function get_width() {
-            return $this -> width;
+            return $this->width;
         }
 
-        function get_area($length, $width) {
-            return $length * $width;
+        function get_area() {
+            return $this->length * $this->width;
         }
 
-        function get_perimeter($length, $width) {
-            return 2 * ($length + $width);
+        function get_perimeter() {
+            return 2 * ($this->length + $this->width);
         }
     }
 
@@ -46,10 +46,10 @@
         $length = $_POST['length'];
         $width = $_POST['width'];
         $rect = new Rectangle($length, $width);
-        echo "Length: " . $rect -> get_length() . "<br>";
-        echo "Width: " . $rect -> get_width() . "<br>";
-        echo "Area: " . $rect -> get_area($length, $width) . "<br>";
-        echo "Perimeter: " . $rect -> get_perimeter($length, $width) . "<br>";
+        echo "Length: " . $rect->get_length() . "<br>";
+        echo "Width: " . $rect->get_width() . "<br>";
+        echo "Area: " . $rect->get_area() . "<br>";
+        echo "Perimeter: " . $rect->get_perimeter() . "<br>";
     }
 
 ?>

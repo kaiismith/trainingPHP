@@ -23,33 +23,33 @@
         private $c;
 
         public function getA() {
-            return $this -> a;
+            return $this->a;
         }
 
         public function getB() {
-            return $this -> b;
+            return $this->b;
         }
 
         public function getC() {
-            return $this -> c;
+            return $this->c;
         }
 
         public function __construct($a, $b, $c) {
-            $this -> a = $a;
-            $this -> b = $b;
-            $this -> c = $c;
+            $this->a = $a;
+            $this->b = $b;
+            $this->c = $c;
         }
 
         public function calculateDelta() {
-            return ($this -> b ** 2) - 4 * ($this -> a) * ($this -> c);
+            return ($this->b ** 2) - 4 * ($this->a) * ($this->c);
         }
 
         public function getRoot1() {
-            return (-($this -> b) + ($this -> calculateDelta() ** 0.5)) / (2 * ($this -> a));
+            return (-($this->b) + ($this->calculateDelta() ** 0.5)) / (2 * ($this->a));
         }
 
         public function getRoot2() {
-            return (-($this -> b) - ($this -> calculateDelta() ** 0.5)) / (2 * ($this -> a));
+            return (-($this->b) - ($this->calculateDelta() ** 0.5)) / (2 * ($this->a));
         }
     }
 
@@ -59,9 +59,9 @@
         $c = $_POST['c'];
 
         $equ = new QuadracticEquation($a, $b, $c);
-        if ($equ -> calculateDelta() >= 0) {
-            echo "x1: " . $equ -> getRoot1() . "<br>";
-            echo "x2: " . $equ -> getRoot2() . "<br>";
+        if ($equ->calculateDelta() >= 0) {
+            echo "x1: " . $equ->getRoot1() . "<br>";
+            echo "x2: " . $equ->getRoot2() . "<br>";
         }
         else {
             echo "NO SOLUTION!";
