@@ -13,7 +13,7 @@
             if ($arr[$i] < $min) {
                 $min = $arr[$i];
             }
-            $total += $i;
+            $total += $arr[$i];
         }
         return [$total, $max, $min];
     }
