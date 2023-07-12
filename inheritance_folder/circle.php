@@ -1,11 +1,11 @@
 <?php
-    include_once "shape.php";
+    include_once "Shape.php";
 
     class Circle extends Shape {
         public $radius;
      
         function __construct($name, $radius) {
-            $this->name = $name;
+            parent::__construct($name);
             $this->radius = $radius;
         }
 

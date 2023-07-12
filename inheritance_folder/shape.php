@@ -8,7 +8,7 @@
         }
 
         function showName() {
-            echo "My name is " . $this->name . ".<br>";
+            return "My name is " . $this->name . ".<br>";
         }
     }
     

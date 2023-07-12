@@ -1,12 +1,11 @@
 <?php
-    include_once "rectangle.php";
+    include_once "Rectangle.php";
 
     class Rectangular extends Rectangle {
         public $height;
      
         function __construct($name, $length, $width, $height) {
-            $this->name = $name;
-            $this->length = $length;
+            parent::__construct($name, $length);
             $this->width = $width;
             $this->height = $height;
         }

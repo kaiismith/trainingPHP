@@ -1,12 +1,11 @@
 <?php
-    include_once "circle.php";
+    include_once "Circle.php";
 
     class Cylinder extends Circle {
         public $height;
      
         function __construct($name, $radius, $height) {
-            $this->name = $name;
-            $this->radius = $radius;
+            parent::__construct($name, $radius);
             $this->height = $height;
         }
 

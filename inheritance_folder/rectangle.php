@@ -1,12 +1,12 @@
 <?php
-    include_once "shape.php";
+    include_once "Shape.php";
 
     class Rectangle extends Shape {
         public $length;
         public $width;
      
         function __construct($name, $length, $width) {
-            $this->name = $name;
+            parent::__construct($name);
             $this->length = $length;
             $this->width = $width;
         }
