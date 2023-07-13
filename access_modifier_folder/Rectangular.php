@@ -19,7 +19,7 @@
         }
 
         public function calculateArea() {
-            return parent::calculateArea();
+            return 2 * parent::calculateArea() + 2 * (parent::calculatePerimeter()) * $this->height;
         }
 
         public function calculateVolume() {
