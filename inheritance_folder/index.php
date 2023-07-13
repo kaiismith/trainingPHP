@@ -33,6 +33,4 @@ use LDAP\Result;
     echo "PERIMETER: " . $rectangular->calculatePerimeter() . "<br>";
     echo "VOLUME: " . $rectangular->calculateVolume() . "<br><br>";
 
-
-
 ?>
