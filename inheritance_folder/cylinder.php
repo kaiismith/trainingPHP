@@ -15,7 +15,7 @@
         }
 
         function calculateArea() {
-            return parent::calculateArea();
+            return 2 * parent::calculateArea() + 2 * pi() * $this->radius * $this->height;
         }
 
         function calculateVolume() {
