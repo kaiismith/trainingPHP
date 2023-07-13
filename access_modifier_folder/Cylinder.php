@@ -4,7 +4,7 @@
     class Cylinder extends Circle {
         private $height;
      
-        function __construct($name, $radius, $height) {
+        public function __construct($name, $radius, $height) {
             parent::__construct($name, $radius);
             $this->height = $height;
         }
@@ -13,16 +13,16 @@
             return $this->height;
         }
 
-        function calculatePerimeter()
+        public function calculatePerimeter()
         {
             return "You cannot use this function!";
         }
 
-        function calculateArea() {
-            return parent::calculateArea();
+        public function calculateArea() {
+            return 2 * parent::calculateArea() + 2 * pi() * $this->radius * $this->height;
         }
 
-        function calculateVolume() {
+        public function calculateVolume() {
             return $this->calculateArea() * ($this->height);
         }
     }

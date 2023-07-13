@@ -3,7 +3,7 @@
     class Shape {
         private $name;
 
-        function __construct($name) {
+        public function __construct($name) {
             $this->name = $name;
         }
 
@@ -11,7 +11,7 @@
             return $this->name;
         }
 
-        function showName() {
+        public function showName() {
             return "My name is " . $this->name . ".<br>";
         }
     }

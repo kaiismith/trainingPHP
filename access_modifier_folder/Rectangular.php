@@ -4,7 +4,7 @@
     class Rectangular extends Rectangle {
         public $height;
      
-        function __construct($name, $length, $width, $height) {
+        public function __construct($name, $length, $width, $height) {
             parent::__construct($name, $length, $width);
             $this->height = $height;
         }
@@ -13,16 +13,16 @@
             return $this->height;
         }
 
-        function calculatePerimeter()
+        public function calculatePerimeter()
         {
             return "You cannot use this function!";
         }
 
-        function calculateArea() {
+        public function calculateArea() {
             return parent::calculateArea();
         }
 
-        function calculateVolume() {
+        public function calculateVolume() {
             return $this->calculateArea() * ($this->height);
         }
     }

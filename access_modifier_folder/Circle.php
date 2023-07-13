@@ -4,7 +4,7 @@
     class Circle extends Shape {
         private $radius;
      
-        function __construct($name, $radius) {
+        public function __construct($name, $radius) {
             parent::__construct($name);
             $this->radius = $radius;
         }
@@ -13,11 +13,11 @@
             return $this->radius;
         }
 
-        function calculateArea() {
+        public function calculateArea() {
             return pi() * ($this->radius ** 2);
         }
 
-        function calculatePerimeter() {
+        public function calculatePerimeter() {
             return 2 * pi() * ($this->radius);
         }
     }
