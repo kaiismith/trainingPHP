@@ -5,8 +5,7 @@
         public $height;
      
         function __construct($name, $length, $width, $height) {
-            parent::__construct($name, $length);
-            $this->width = $width;
+            parent::__construct($name, $length, $width);
             $this->height = $height;
         }
 
